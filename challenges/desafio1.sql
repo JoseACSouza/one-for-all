@@ -30,7 +30,9 @@ CREATE TABLE SpotifyClone.albuns
     album_id	INT,
     cancao_name	VARCHAR(512),
     duracao_segundos	INT,
-    FOREIGN KEY (album_id) REFERENCES SpotifyClone.albuns(album_id)
+		artista_id INT,
+    FOREIGN KEY (album_id) REFERENCES SpotifyClone.albuns(album_id),
+		FOREIGN KEY (artista_id) REFERENCES SpotifyClone.artistas(artista_id)
 ) engine= InnoDB;
 
 CREATE TABLE SpotifyClone.pessoasUsuarias 
@@ -86,17 +88,17 @@ INSERT INTO SpotifyClone.albuns (album, artista_id, ano_lancamento) VALUES
 	('Somewhere Far Beyond', 5, '2007'),
 	('I Put A Spell On You', 6, '2012');
 
-INSERT INTO SpotifyClone.cancoes (album_id, cancao_name, duracao_segundos) VALUES
-	(1, '"BREAK MY SOUL"', '279'),
-	(1, "VIRGO\'S GROOVE", '369'),
-	(1, '"ALIEN SUPERSTAR"', '116'),
-	(2, "Don\'t Stop Me Now", '203'),
-	(3, '"Under Pressure"', '152'),
-	(4, '"Como Nossos Pais"', '105'),
-	(5, '"O Medo de Amar é o Medo de Ser Livre"', '207'),
-	(6, '"Samba em Paris"', '267'),
-	(7, "The Bard's Song", '244'),
-	(8, '"Feeling Good"', '100');
+INSERT INTO SpotifyClone.cancoes (album_id, cancao_name, duracao_segundos, artista_id) VALUES
+	(1, '"BREAK MY SOUL"', '279', 1),
+	(1, "VIRGO\'S GROOVE", '369', 1),
+	(1, '"ALIEN SUPERSTAR"', '116', 1),
+	(2, "Don\'t Stop Me Now", '203', 2),
+	(3, '"Under Pressure"', '152', 2),
+	(4, '"Como Nossos Pais"', '105', 3),
+	(5, '"O Medo de Amar é o Medo de Ser Livre"', '207', 3),
+	(6, '"Samba em Paris"', '267', 4),
+	(7, "The Bard's Song", '244', 5),
+	(8, '"Feeling Good"', '100', 6);
 
 INSERT INTO SpotifyClone.pessoasUsuarias (nome_pessoa_usuaria, idade, data_assinatura, plano_id) VALUES
 	('Barbara Liskov', 82, '2019-10-20', 1),

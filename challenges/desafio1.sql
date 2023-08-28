@@ -12,7 +12,7 @@ CREATE TABLE SpotifyClone.planos
 (
     plano_id	INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     plano_nome	VARCHAR(512) NOT NULL UNIQUE,
-    valor_plano	VARCHAR(512) UNIQUE NOT NULL
+    valor_plano	DECIMAL(5,2) NOT NULL
 ) engine = InnoDB;
 
 CREATE TABLE SpotifyClone.albuns 
@@ -73,10 +73,10 @@ INSERT INTO SpotifyClone.artistas (artista) VALUES ('Nina Simone');
 
 
 INSERT INTO SpotifyClone.planos (plano_nome, valor_plano) VALUES
-	('gratuito', '0'),
-	('familiar', '7,99'),
-	('universitário', '5,99'),
-	('pessoal', '6,99');
+	('gratuito', 0),
+	('familiar', 7.99),
+	('universitário', 5.99),
+	('pessoal', 6.99);
 
 INSERT INTO SpotifyClone.albuns (album, artista_id, ano_lancamento) VALUES
 	('Renaissance', 1, '2022'),

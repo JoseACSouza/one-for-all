@@ -1,10 +1,3 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+"No projeto ***One For All***, usarei **algumas** tabelas para revisar e consolidar **todos** os principais conceitos vistos até o momento. Onde planilhas não normalizadas foram normalizadas e populadas em um banco de dados para executar queries com o intuito de encontrar as informações solicitadas." \
+stacks: ["MySQL", "Docker"] \
+instructions: "Para testar em sua máquina, clone o repositório e use os comandos npm install, docker-compose up" 
